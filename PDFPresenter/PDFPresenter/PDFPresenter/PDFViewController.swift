@@ -13,7 +13,7 @@ public struct pdfItem {
     var pdfURL: String
     var title: String
     
-    init(title: String? = nil, pdfURL: String? = nil){
+    public init(title: String? = nil, pdfURL: String? = nil){
         self.title = title ?? ""
         self.pdfURL = pdfURL ?? ""
     }
@@ -27,7 +27,7 @@ public class PDFViewController: UIViewController, PDFViewDelegate {
     private var outline: PDFOutline?
     var pdf = pdfItem()
     
-    init(pdf: pdfItem) {
+    public init(pdf: pdfItem) {
         self.pdf = pdf
         super.init(nibName: nil, bundle: nil)
         

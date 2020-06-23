@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "PDFPresenter"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.4"
   spec.summary      = "PDF Presenter presents PDF from online sources or any internet urls by using PDFKit."
 
   # This description is used to generate tags and improve search results.
@@ -77,7 +77,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/dks333/PDFPresenter.git", :tag => "1.0.2" }
+  spec.source       = { :git => "https://github.com/dks333/PDFPresenter.git", :tag => "1.0.4" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -88,7 +88,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "PDFPresenter/PDFPresenter/PDFPresenter/*"
+  spec.source_files  = "PDFPresenter/PDFPresenter/PDFPresenter/*.swift"
   # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
