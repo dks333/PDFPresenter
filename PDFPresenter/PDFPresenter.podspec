@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "PDFPresenter"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "PDF Presenter presents PDF from online sources or any internet urls by using PDFKit."
 
   # This description is used to generate tags and improve search results.
@@ -77,7 +77,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/dks333/PDFPresenter.git", :tag => "1.0.1" }
+  spec.source       = { :git => "https://github.com/dks333/PDFPresenter.git", :tag => "1.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

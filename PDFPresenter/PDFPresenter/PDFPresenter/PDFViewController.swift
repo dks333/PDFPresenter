@@ -25,9 +25,19 @@ public class PDFViewController: UIViewController, PDFViewDelegate {
     var pdfView = PDFView()
     var document = PDFDocument()
     private var outline: PDFOutline?
+    var pdf = pdfItem()
+    
+    init(pdf: pdfItem) {
+        self.pdf = pdf
+        super.init(nibName: nil, bundle: nil)
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
     
     private var finishLoading = false  // Return true if the pdf document is loaded
-    var pdf = pdfItem()
     
     var ai : UIActivityIndicatorView!{
         didSet{

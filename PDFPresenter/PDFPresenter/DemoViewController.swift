@@ -17,8 +17,7 @@ class DemoViewController: UIViewController {
     
     
     @IBAction func viewOnlinePdf(_ sender: Any) {
-        let vc =  PDFViewController()
-        vc.pdf = pdfItem(title: "Demo", pdfURL: "https://www.apple.com/education/docs/everyone-can-code-curriculum-guide.pdf")
+        let vc =  PDFViewController(pdf: pdfItem(title: "Demo", pdfURL: "https://www.apple.com/education/docs/everyone-can-code-curriculum-guide.pdf"))
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
