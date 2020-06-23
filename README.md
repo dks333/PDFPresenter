@@ -17,7 +17,7 @@ pod 'PDFPresenter'
  https://cocoapods.org/pods/PDFPresenter
  
 ## Usage
-###Paremeter: Title and URL of the pdf
+### Paremeter: Title and URL of the pdf
 
 ```Swift
 import PDFPresenter
