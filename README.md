@@ -24,6 +24,10 @@ import PDFPresenter
 let vc =  PDFViewController(pdf: pdfItem(title: "{Insert PDF Title here}", pdfURL: "{Insert PDF URL here}"))
 self.navigationController?.pushViewController(vc, animated: true)
 ```
+
+###Paremeter: Title and URL of the pdf
+
+
 ## Customization
 Coming soon
 
