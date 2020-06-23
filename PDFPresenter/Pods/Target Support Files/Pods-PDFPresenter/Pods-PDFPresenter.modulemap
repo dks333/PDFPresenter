@@ -1,0 +1,6 @@
+framework module Pods_PDFPresenter {
+  umbrella header "Pods-PDFPresenter-umbrella.h"
+
+  export *
+  module * { export * }
+}

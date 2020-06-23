@@ -9,7 +9,7 @@
 import UIKit
 import PDFKit
 
-struct pdfItem {
+public struct pdfItem {
     var pdfURL: String
     var title: String
     
@@ -19,7 +19,7 @@ struct pdfItem {
     }
 }
 
-class PDFViewController: UIViewController, PDFViewDelegate {
+public class PDFViewController: UIViewController, PDFViewDelegate {
     
     private var pageLbl = UILabel()
     var pdfView = PDFView()
@@ -51,7 +51,7 @@ class PDFViewController: UIViewController, PDFViewDelegate {
     private var outlineBtn = UIBarButtonItem()
     private var shareBtn = UIBarButtonItem()
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
@@ -60,22 +60,22 @@ class PDFViewController: UIViewController, PDFViewDelegate {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         super.viewWillAppear(animated)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver (self, selector: #selector(showCurrentPageIndex), name: Notification.Name.PDFViewPageChanged, object: nil)
         super.viewDidAppear(animated)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    public override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillDisappear(animated)
     }
     
-    override func viewDidDisappear (_ animated: Bool) {
+    public override func viewDidDisappear (_ animated: Bool) {
         NotificationCenter.default.removeObserver(self, name: Notification.Name.PDFViewPageChanged, object: nil)
         super.viewDidDisappear(animated)
     }

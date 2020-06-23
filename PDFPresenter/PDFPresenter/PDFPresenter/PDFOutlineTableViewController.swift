@@ -13,7 +13,7 @@ protocol OutlineDelegate: class {
     func goTo(page: PDFPage)
 }
 
-class PDFOutlineTableViewController: UITableViewController {
+public class PDFOutlineTableViewController: UITableViewController {
 
     let outline: PDFOutline
     weak var delegate: OutlineDelegate?
@@ -28,16 +28,16 @@ class PDFOutlineTableViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return outline.numberOfChildren
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =
             tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
         if let label = cell.textLabel, let title = outline.child(at: indexPath.row)?.label {
@@ -46,7 +46,7 @@ class PDFOutlineTableViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let page = outline.child(at: indexPath.row)?.destination?.page {
             delegate?.goTo(page: page)
             self.dismiss(animated: true, completion: nil)

@@ -15,6 +15,7 @@
 		1820B1F124A15EBB000572E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1820B1EF24A15EBB000572E3 /* LaunchScreen.storyboard */; };
 		1820B1FD24A15FA3000572E3 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820B1F924A15FA2000572E3 /* PDFViewController.swift */; };
 		1820B1FE24A15FA3000572E3 /* PDFOutlineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820B1FA24A15FA3000572E3 /* PDFOutlineTableViewController.swift */; };
+		8D569CC79A69DC8A46947CED /* Pods_PDFPresenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 465DF28CADA716743BB74786 /* Pods_PDFPresenter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		1820B1F224A15EBB000572E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1820B1F924A15FA2000572E3 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		1820B1FA24A15FA3000572E3 /* PDFOutlineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFOutlineTableViewController.swift; sourceTree = "<group>"; };
+		465DF28CADA716743BB74786 /* Pods_PDFPresenter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PDFPresenter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F771C43A279F789955031E3 /* Pods-PDFPresenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDFPresenter.release.xcconfig"; path = "Target Support Files/Pods-PDFPresenter/Pods-PDFPresenter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +38,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D569CC79A69DC8A46947CED /* Pods_PDFPresenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		055BC2C06A723932522F58EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F771C43A279F789955031E3 /* Pods-PDFPresenter.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1820B1D824A15EB6000572E3 = {
 			isa = PBXGroup;
 			children = (
 				1820B1E324A15EB6000572E3 /* PDFPresenter */,
 				1820B1E224A15EB6000572E3 /* Products */,
+				055BC2C06A723932522F58EE /* Pods */,
+				6D21F71F48A5ECA96E6DE613 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +104,14 @@
 			path = PDFPresenter;
 			sourceTree = "<group>";
 		};
+		6D21F71F48A5ECA96E6DE613 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				465DF28CADA716743BB74786 /* Pods_PDFPresenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,6 +119,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1820B1F524A15EBB000572E3 /* Build configuration list for PBXNativeTarget "PDFPresenter" */;
 			buildPhases = (
+				E8C97C91E65CE0ECBF7CB5AD /* [CP] Check Pods Manifest.lock */,
 				1820B1DD24A15EB6000572E3 /* Sources */,
 				1820B1DE24A15EB6000572E3 /* Frameworks */,
 				1820B1DF24A15EB6000572E3 /* Resources */,
@@ -155,6 +179,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E8C97C91E65CE0ECBF7CB5AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PDFPresenter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1820B1DD24A15EB6000572E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -190,66 +239,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1820B1F324A15EBB000572E3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
 		1820B1F424A15EBB000572E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -304,26 +293,9 @@
 			};
 			name = Release;
 		};
-		1820B1F624A15EBB000572E3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 458XY7U8R6;
-				INFOPLIST_FILE = PDFPresenter/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.KaishanDing.PDFPresenter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		1820B1F724A15EBB000572E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F771C43A279F789955031E3 /* Pods-PDFPresenter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -346,7 +318,6 @@
 		1820B1DC24A15EB6000572E3 /* Build configuration list for PBXProject "PDFPresenter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1820B1F324A15EBB000572E3 /* Debug */,
 				1820B1F424A15EBB000572E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -355,7 +326,6 @@
 		1820B1F524A15EBB000572E3 /* Build configuration list for PBXNativeTarget "PDFPresenter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1820B1F624A15EBB000572E3 /* Debug */,
 				1820B1F724A15EBB000572E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
