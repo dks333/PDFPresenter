@@ -1,7 +1,7 @@
 # PDFPresenter
 iOS PDF Presenter written in Swift
 
-<div style="width:260px;max-width:100%;"><div style="height:0;padding-bottom:200.38%;position:relative;"><iframe width="260" height="521" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameBorder="0" src="https://imgflip.com/embed/461831"></iframe></div><p><a href="https://imgflip.com/gif/461831">via Imgflip</a></p></div>
+<a href="https://imgflip.com/gif/461831"><img src="https://imgflip.com/gif/461831" title="PDFPresenter"/></a>
 
 ## Features
 - Outline of the pdf file
